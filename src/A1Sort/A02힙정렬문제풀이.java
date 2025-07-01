@@ -43,7 +43,6 @@ public int[] solution(int k, int[] score) {
                 answer += temp * temp;
             }
         }
-
         return answer;
     }
 }

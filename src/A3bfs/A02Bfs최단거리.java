@@ -60,4 +60,9 @@ public class A02Bfs최단거리 {
 //        최단거리 얼마인지 출력
         System.out.println(distance[target]);
     }
+//    0 → distance[0] = 0
+//    이웃: 1, 2 → 큐에 추가, 거리 1
+//    1 → 이웃: 3 → 큐에 추가, 거리 2
+//    2 → 이웃: 3, 4 → 3 이미 추가됨, 4는 새로 추가 → 거리 2
+//    (★ 4가 target이므로 break 가능)
 }
