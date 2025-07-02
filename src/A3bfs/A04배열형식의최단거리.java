@@ -27,7 +27,7 @@ public class A04배열형식의최단거리 {
                 int ny = y + dy[i];
                 if (nx >= 0 && ny >= 0 && nx < maps.length && ny < maps[0].length) {
                     if (maps[nx][ny] == 1 && distance[nx][ny] == 0) { //이동해야 되는 경로가 벽인지 그리고 이미 들렀던 곳인지 검사
-                        distance[nx][ny] = distance[x][y] + 1;
+                        distance[nx][ny] = distance[x][y] + 1;  //다음 목적지의 거리를 기존 구역 + 1 하여 증가시킴
                         myQueue.add(new int[]{nx, ny});
                     }
                 }
