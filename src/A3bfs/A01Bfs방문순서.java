@@ -23,10 +23,13 @@ public class A01Bfs방문순서 {
 //            양방향의 경우
             adjList.get(nodes[i][1]).add(nodes[i][0]);
         }
+
 //        정렬번호가 작은것부터 방문하기 위한 정렬
         for (int i = 0; i < adjList.size(); i++) {
             adjList.get(i).sort(Comparator.naturalOrder());
         }
+
+
         Queue<Integer> myQueue = new LinkedList<>();
         myQueue.add(0);
         visited[0] = true;
@@ -41,4 +44,10 @@ public class A01Bfs방문순서 {
             }
         }
     }
+//    시작: 0 → queue: [0]
+//    꺼냄: 0 → 출력 0, 이웃 1, 2 → queue: [1, 2]
+//    꺼냄: 1 → 출력 1, 이웃 0(방문됨), 3 → queue: [2, 3]
+//    꺼냄: 2 → 출력 2, 이웃 0 3 4 → 3은 이미 queue에 있음, 4 추가 → queue: [3, 4]
+//    꺼냄: 3 → 출력 3 → 이웃 1, 2 (모두 방문됨) → queue: [4]
+//    꺼냄: 4 → 출력 4 → 이웃 2 (이미 방문)
 }
